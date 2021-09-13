@@ -1,9 +1,18 @@
 import React from 'react';
 
-export default function CurrentRow() {
+export default function CurrentRow({ currOptions }) {
+
     return (
         <div>
-            Currenct Row
+            <input type="number" className="inout" />
+            <select>
+                {currOptions.map(option => {
+                    return <option key={option} value={option}>
+                        {option}
+                    </option>
+                })}
+
+            </select>
         </div>
     )
 }
